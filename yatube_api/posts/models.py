@@ -30,7 +30,7 @@ class Post(models.Model):
     )
 
     def __str__(self):
-        return f"{self.text[:50]}/n{self.author}/n{self.group}"
+        return f"{self.text[:50]}:{self.author.username}:{self.group}"
 
 
 class Comment(models.Model):
